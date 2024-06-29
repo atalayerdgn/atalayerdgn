@@ -100,18 +100,6 @@ class Image:
                 st.markdown(f"**Image Shape:** {self.image_array.shape}")
                 st.markdown("---")
                 st.markdown("### Image Analysis")
-                st.markdown("#### Image Histogram")
-                self.show_histogram()
-                st.markdown("#### Image Channels")
-                self.show_channels()
-                st.markdown("#### Image Grayscale")
-                self.show_grayscale()
-                st.markdown("#### Image Thresholding")
-                self.show_thresholding()
-                st.markdown("#### Image Blurring")
-                self.show_blurring()
-                st.markdown("#### Image Edge Detection")
-                self.show_edge_detection()
 
 def main():
     image = Image()
