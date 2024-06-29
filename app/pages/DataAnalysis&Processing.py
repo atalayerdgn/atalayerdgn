@@ -246,6 +246,20 @@ class KaggleDataHandler:
                 if st.button('Export Cleaned Data'):
                     self.dFrame.to_csv(os.path.join(self.datasets_dir, "p_" + self.selected_csv), index=False)
                     st.success("Cleaned data exported successfully.")
+            if st.button('Histogram Analysis'):
+                num_features = self.dFrame.shape[1]
+                num_rows = (num_features // 3) + 1
+                plt.figure(figsize=(15, num_rows * 5))
+
+                for i, column in enumerate(self.dFrame.columns):
+                    plt.subplot(num_rows, 3, i + 1)
+                    plt.hist(self.dFrame[column].dropna(), bins=30, edgecolor='k')
+                    plt.title(f'Distribution of {column}')
+                    plt.xlabel(column)
+                    plt.ylabel('Frequency')
+
+                plt.tight_layout()
+                plt.show()
             if st.button('Modify Column Values'):
                 st.session_state.modify_column = True
                 if 'modify_column' in st.session_state and st.session_state.modify_column:
