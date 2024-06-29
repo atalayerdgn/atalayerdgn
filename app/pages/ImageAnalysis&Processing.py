@@ -11,7 +11,7 @@ class Image:
         self.image = None
         self.image_path = None
         self.image_array = None
-    def set_background() -> None:
+    def set_background(self) -> None:
         st.set_page_config(
         page_title="Image Analysis & Processing",
         page_icon=":computer:",
