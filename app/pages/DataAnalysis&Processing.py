@@ -180,7 +180,7 @@ class KaggleDataHandler:
                 col1, col2 = st.columns(2)
                 with col1:
                     dtype_counts = self.dFrame.dtypes.value_counts()
-                    fig, ax = plt.subplots(figsize(6, 6))
+                    fig, ax = plt.subplots(figsize = (10, 6))
                     ax.pie(dtype_counts, labels=dtype_counts.index, autopct='%1.1f%%', startangle=90, colors=sns.color_palette('pastel'))
                     ax.axis('equal')
                     st.pyplot(fig)
