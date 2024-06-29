@@ -78,12 +78,13 @@ class Image:
             """,
             unsafe_allow_html=True
         )
-    def load_image(self, image_path):
-        self.image_path = image_path
-        self.image = Image.open(image_path)
+    def load_image(self, image_file):
+        self.image = Image.open(image_file)
         self.image_array = np.array(self.image)
+    
     def show_image(self):
         st.image(self.image)
+    
     def run(self):
         st.title("Image Analysis & Processing")
         st.markdown("---")
@@ -97,7 +98,6 @@ class Image:
                 self.show_image()
                 st.markdown("---")
                 st.markdown("### Image Information")
-                st.markdown(f"**Image Path:** {self.image_path}")
                 st.markdown(f"**Image Shape:** {self.image_array.shape}")
                 st.markdown("---")
                 st.markdown("### Image Analysis")
@@ -113,7 +113,6 @@ class Image:
                 self.show_blurring()
                 st.markdown("#### Image Edge Detection")
                 self.show_edge_detection()
-
 
 def main():
     image = Image()
