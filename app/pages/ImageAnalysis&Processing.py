@@ -113,3 +113,12 @@ class Image:
                 self.show_blurring()
                 st.markdown("#### Image Edge Detection")
                 self.show_edge_detection()
+
+
+def main():
+    image = Image()
+    image.set_background()
+    image.run()
+
+if __name__ == "__main__":
+    main()
