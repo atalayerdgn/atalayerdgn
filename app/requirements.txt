@@ -5,5 +5,7 @@ matplotlib
 seaborn
 scikit-learn
 kaggle
+opencv-python
 streamlit_pdf_viewer
+pillow
 bokeh==2.4.3
