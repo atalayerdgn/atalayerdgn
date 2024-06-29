@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from PIL import Image
+import cv2
 import matplotlib.pyplot as plt
 
 
@@ -79,7 +79,7 @@ class Image:
             unsafe_allow_html=True
         )
     def load_image(self, image_file):
-        self.image = Image.open(image_file)
+        self.image = cv2.imread(image_file)
         self.image_array = np.array(self.image)
     
     def show_image(self):
