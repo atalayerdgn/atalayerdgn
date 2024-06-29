@@ -247,19 +247,28 @@ class KaggleDataHandler:
                     self.dFrame.to_csv(os.path.join(self.datasets_dir, "p_" + self.selected_csv), index=False)
                     st.success("Cleaned data exported successfully.")
             if st.button('Histogram Analysis'):
-                num_features = self.dFrame.shape[1]
-                num_rows = (num_features // 3) + 1
-                plt.figure(figsize=(15, num_rows * 5))
+                try:
+                    num_features = self.dFrame.shape[1]
+                    num_rows = (num_features // 3) + 1
+                    fig, axes = plt.subplots(num_rows, 3, figsize=(15, num_rows * 5))
 
-                for i, column in enumerate(self.dFrame.columns):
-                    plt.subplot(num_rows, 3, i + 1)
-                    plt.hist(self.dFrame[column].dropna(), bins=30, edgecolor='k')
-                    plt.title(f'Distribution of {column}')
-                    plt.xlabel(column)
-                    plt.ylabel('Frequency')
+                    axes = axes.flatten()  # Flatten the axes array to make it easier to iterate over
 
-                plt.tight_layout()
-                plt.show()
+                    for i, column in enumerate(self.dFrame.columns):
+                        axes[i].hist(self.dFrame[column].dropna(), bins=30, edgecolor='k')
+                        axes[i].set_title(f'Distribution of {column}')
+                        axes[i].set_xlabel(column)
+                        axes[i].set_ylabel('Frequency')
+
+                    # Hide any unused subplots
+                    for j in range(i + 1, len(axes)):
+                        fig.delaxes(axes[j])
+
+                    plt.tight_layout()
+                    st.pyplot(fig)
+
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
             if st.button('Modify Column Values'):
                 st.session_state.modify_column = True
                 if 'modify_column' in st.session_state and st.session_state.modify_column:
