@@ -77,3 +77,10 @@ class Pandas:
                     'capital_loss', 'hours_per_week', 'country_of_origin','income'] \
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
 
+
+def main() -> None:
+    Pandas.set_background()
+    Pandas.Pandas_doc()
+
+if __name__ == "__main__":
+    main()
