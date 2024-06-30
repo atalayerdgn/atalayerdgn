@@ -77,7 +77,7 @@ class Pandas:
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
         st.code("df")
         st.write("Bana bu kod parçası şöyle bir çıktı verir:")
-        st.write("![Pandas](https://user-images.githubusercontent.com/23660137/129469116-9b5d9c4b-1b6e-4e0d-8c4f-3b3e7d5e2d1a.png)")
+        st.image("doc/img/pandas1.png")
 
 def main() -> None:
     pandas_instance = Pandas()
