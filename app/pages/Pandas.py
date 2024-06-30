@@ -61,7 +61,7 @@ class Pandas:
     
     def Pandas_doc(self) -> None:
         st.title("Pandas")
-        st.write("Pandas kütüphanesinin çok kullanışlı bir çok özelliği bulunur. İşte bunlardan bazıları ;\
+        st.write("Pandas kütüphanesinin çok kullanışlı bir çok özelliği bulunur. İşte bunlardan bazıları ;\n\
                 - Sayısal ve sayısal olmayan verilerinde **eksik verilerin** (NaN olarak temsil edilir) kolay bir şekilde işlenmesi.\n\
                 - DataFrame objelerden sütunlar **eklenebilmesi ve silinebilmesi**.\n\
                 - Veri kümelerini toplayarak ve dönüştürerek üzerinde bölme-uygulama-birleştirme işlemleri gerçekleştirmek için verileri **gruplaması**.\n\
