@@ -76,8 +76,8 @@ class Pandas:
                         'capital_loss', 'hours_per_week', 'country_of_origin','income'] \n\n\n\
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
         st.code("df")
-        st.write("Bana bu kod parçası şöyle bir çıktı verir:")
         st.image("app/doc/Documentations/pandas1.png")
+        st.write("Bu kod parçasında, pandas kütüphanesini pd olarak import ediyoruz. Daha sonra bir veri seti olan adult.data'yı okuyoruz ve bu veri setini df değişkenine atıyoruz.")
 
 def main() -> None:
     pandas_instance = Pandas()
