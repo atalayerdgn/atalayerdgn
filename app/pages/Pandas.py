@@ -1,17 +1,16 @@
 import streamlit as st
 import pandas as pd
 
-
-
 class Pandas:
     def __init__(self) -> None:
         pass
+    
     def set_background(self) -> None:
         st.set_page_config(
-        page_title="Pandas",
-        page_icon=":computer:",
-        layout="wide",
-        initial_sidebar_state="expanded"
+            page_title="Pandas",
+            page_icon=":computer:",
+            layout="wide",
+            initial_sidebar_state="expanded"
         )
         st.markdown(
             """
@@ -59,7 +58,8 @@ class Pandas:
             """,
             unsafe_allow_html=True
         )
-    def Pandas_doc() -> None:
+    
+    def Pandas_doc(self) -> None:
         st.title("Pandas")
         st.write("Pandas kütüphanesinin çok kullanışlı bir çok özelliği bulunur. İşte bunlardan bazıları \
                 - Sayısal ve sayısal olmayan verilerinde **eksik verilerin** (NaN olarak temsil edilir) kolay bir şekilde işlenmesi. \
@@ -70,17 +70,17 @@ class Pandas:
                 - Veri kümelerinin **birleştirebilmesi**. \
                 - Excel dosyalarından, veritabanlarından veri yüklemek ve ultra hızlı HDF5 formatından veri kaydetmek/yüklemek için **güçlü IO araçları** olması.")
         st.markdown("---")
-        st.code("import pandas as pd \
-                import numpy as np \
-                columns = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status', \
-                    'occupation', 'relationship', 'ethnicity', 'gender','capital_gain', \
-                    'capital_loss', 'hours_per_week', 'country_of_origin','income'] \
+        st.code("import pandas as pd \n\
+                import numpy as np \n\
+                columns = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status', \n\
+                    'occupation', 'relationship', 'ethnicity', 'gender','capital_gain', \n\
+                    'capital_loss', 'hours_per_week', 'country_of_origin','income'] \n\
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
 
-
 def main() -> None:
-    Pandas.set_background()
-    Pandas.Pandas_doc()
+    pandas_instance = Pandas()
+    pandas_instance.set_background()
+    pandas_instance.Pandas_doc()
 
 if __name__ == "__main__":
     main()
