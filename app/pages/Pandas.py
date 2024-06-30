@@ -75,6 +75,7 @@ class Pandas:
                         'occupation', 'relationship', 'ethnicity', 'gender','capital_gain', \n\
                         'capital_loss', 'hours_per_week', 'country_of_origin','income'] \n\n\n\
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
+        st.code("df.head()")
 
 def main() -> None:
     pandas_instance = Pandas()
