@@ -21,5 +21,7 @@ def main() -> None:
             st.switch_page('pages/SQL_Cheat_Sheet.py')
         elif submit_button and cheatsheets == 'Maths For ML':
             st.switch_page('pages/MathsForMachineLearning.py')
+        elif submit_button and cheatsheets == 'Pandas':
+            st.switch_page('pages/Pandas.py')
 if __name__ == "__main__":
     main()
