@@ -61,14 +61,14 @@ class Pandas:
     
     def Pandas_doc(self) -> None:
         st.title("Pandas")
-        st.write("Pandas kütüphanesinin çok kullanışlı bir çok özelliği bulunur. İşte bunlardan bazıları \
-                - Sayısal ve sayısal olmayan verilerinde **eksik verilerin** (NaN olarak temsil edilir) kolay bir şekilde işlenmesi. \
-                - DataFrame objelerden sütunlar **eklenebilmesi ve silinebilmesi**. \
-                - Veri kümelerini toplayarak ve dönüştürerek üzerinde bölme-uygulama-birleştirme işlemleri gerçekleştirmek için verileri **gruplaması**. \
-                - Diğer Python ve NumPy veri yapılarındaki düzensiz, farklı şekillerde indexlenmiş verileri DataFrame nesnelerine **dönüştürmeyi kolaylaştırması**.\
-                - Akıllı **etiket tabanlı bölümlendirme**, **indeksleme** ve büyük veri kümelerinin **subsetlenmesi**. \
-                - Veri kümelerinin **birleştirebilmesi**. \
-                - Excel dosyalarından, veritabanlarından veri yüklemek ve ultra hızlı HDF5 formatından veri kaydetmek/yüklemek için **güçlü IO araçları** olması.")
+        st.write("Pandas kütüphanesinin çok kullanışlı bir çok özelliği bulunur. İşte bunlardan bazıları ;\
+                - Sayısal ve sayısal olmayan verilerinde **eksik verilerin** (NaN olarak temsil edilir) kolay bir şekilde işlenmesi.\n\
+                - DataFrame objelerden sütunlar **eklenebilmesi ve silinebilmesi**.\n\
+                - Veri kümelerini toplayarak ve dönüştürerek üzerinde bölme-uygulama-birleştirme işlemleri gerçekleştirmek için verileri **gruplaması**.\n\
+                - Diğer Python ve NumPy veri yapılarındaki düzensiz, farklı şekillerde indexlenmiş verileri DataFrame nesnelerine **dönüştürmeyi kolaylaştırması**.\n\
+                - Akıllı **etiket tabanlı bölümlendirme**, **indeksleme** ve büyük veri kümelerinin **subsetlenmesi**.\n\
+                - Veri kümelerinin **birleştirebilmesi**.\n\
+                - Excel dosyalarından, veritabanlarından veri yüklemek ve ultra hızlı HDF5 formatından veri kaydetmek/yüklemek için **güçlü IO araçları** olması.\n")
         st.markdown("---")
         st.code("import pandas as pd \nimport numpy as np \n\
                 columns = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status', \n\
