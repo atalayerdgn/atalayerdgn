@@ -20,14 +20,10 @@ def main():
     st.markdown("---")
 
     with st.form("Pages"):
-        Pages = st.radio('Pages:', ['Data Analysis & Processing', 'CheatSheets', 'My Projects', 'About Me'])
+        Pages = st.radio('Pages:', ['My Projects', 'About Me'])
         st.markdown("---")
         submit_button = st.form_submit_button(label='Go to Page')
         if submit_button:
-            if Pages == 'Data Analysis & Processing':
-                st.switch_page('pages/DataAnalysis&Processing.py')
-            if Pages == 'CheatSheets':
-                st.switch_page('pages/CheatSheets.py')
             if Pages == 'My Projects':
                 st.switch_page('pages/Projects.py')
             if Pages == 'About Me':
