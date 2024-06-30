@@ -20,7 +20,7 @@ def main():
     st.markdown("---")
 
     with st.form("Pages"):
-        Pages = st.radio('Pages:', ['Data Analysis & Processing', 'CheatSheets', 'My Projects', 'About Me','Time Series','Image Analysis and Processing'])
+        Pages = st.radio('Pages:', ['Data Analysis & Processing', 'CheatSheets', 'My Projects', 'About Me'])
         st.markdown("---")
         submit_button = st.form_submit_button(label='Go to Page')
         if submit_button:
@@ -32,10 +32,6 @@ def main():
                 st.switch_page('pages/Projects.py')
             if Pages == 'About Me':
                 st.switch_page('pages/AboutMe.py')
-            if Pages == 'Time Series':
-                st.switch_page('pages/TimeSeriesWithPython.py')
-            if Pages == 'Image Analysis and Processing':
-                st.switch_page('pages/ImageAnalysis&Processing.py')
             st.markdown("---")
 if __name__ == "__main__":
     main()

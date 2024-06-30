@@ -14,7 +14,7 @@ def main() -> None:
     st.title("Cheat Sheets")
     st.markdown("---")
     with st.form("cheatsheets"):
-        cheatsheets = st.radio('Select a cheat sheet:', ['SQL','Maths For ML','Pandas','Numpy','Linear Regression','Logistic Regression','Regression Problems'])
+        cheatsheets = st.radio('Select a cheat sheet:', ['SQL','Maths For ML'])
         st.markdown("---")
         submit_button = st.form_submit_button(label='Show Cheat Sheet')
         if submit_button and cheatsheets == 'SQL':
