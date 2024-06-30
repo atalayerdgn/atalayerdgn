@@ -70,11 +70,10 @@ class Pandas:
                 - Veri kümelerinin **birleştirebilmesi**. \
                 - Excel dosyalarından, veritabanlarından veri yüklemek ve ultra hızlı HDF5 formatından veri kaydetmek/yüklemek için **güçlü IO araçları** olması.")
         st.markdown("---")
-        st.code("import pandas as pd \n\
-                import numpy as np \n\
+        st.code("import pandas as pd \nimport numpy as np \n\
                 columns = ['age', 'workclass', 'fnlwgt', 'education', 'education_num', 'marital_status', \n\
-                    'occupation', 'relationship', 'ethnicity', 'gender','capital_gain', \n\
-                    'capital_loss', 'hours_per_week', 'country_of_origin','income'] \n\
+                        'occupation', 'relationship', 'ethnicity', 'gender','capital_gain', \n\
+                        'capital_loss', 'hours_per_week', 'country_of_origin','income'] \n\n\n\
                 df = pd.read_csv('http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data', names=columns)")
 
 def main() -> None:
