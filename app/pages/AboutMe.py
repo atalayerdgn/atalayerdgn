@@ -39,11 +39,13 @@ class AboutMe:
             st.write("Docker")
             st.write("C / C++")
             st.write("Data Analysis")
+            st.write("Linux")
         with col4:
             st.write("Machine Learning")
+            st.write("Socket Programming")
             st.write("Data Science")
             st.write("Data Processing")
-            st.write("Hadoop / Yarn / Spark")
+            st.write("Big Data Technologies")
         st.markdown("-----")
 
 def main():
