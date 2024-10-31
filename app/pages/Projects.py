@@ -337,6 +337,27 @@ class Projects:
                 st.write("Unit Tests")
                 st.write("Makefile")
             st.markdown("-----")
+    def ft_transcendence() -> None:
+        """
+        Creating Ping Pong game in web environment
+        """
+        with st.expander("ft_transcendence"):
+            st.markdown("-----")
+            st.subheader("Project Description")
+            st.write("The aim of this project is to create a web-based multiplayer game.")
+            st.subheader("Skills")
+            col1, col2 = st.columns(2)
+            with col1:
+                st.write("Docker")
+                st.write("SQL")
+                st.write("Microservices")
+                st.write("JavaScript")
+            with col2:
+                st.write("Grafana and Prometheus")
+                st.write("Blockchain")
+                st.write("Python")
+                st.write("Full Stack Development")
+            st.markdown("-----")
     def Projects() -> None:
         """
         Projects Page
