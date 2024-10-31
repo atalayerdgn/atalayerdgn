@@ -318,6 +318,7 @@ class Projects:
             with col2:
                 st.write("Data Structures")
                 st.write("Makefile")
+                st.write("Socket Programming")
             st.markdown("-----")
     def computorv1() -> None:
         """
