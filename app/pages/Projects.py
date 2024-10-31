@@ -387,6 +387,7 @@ class Projects:
         Projects.AI_For_Medicine()
         Projects.ft_irc()
         Projects.computorv1()
+        Projects.ft_transcendence()
         st.markdown("-----")
     
 def main():
