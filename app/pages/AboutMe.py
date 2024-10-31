@@ -45,7 +45,7 @@ class AboutMe:
             st.write("Socket Programming")
             st.write("Data Science")
             st.write("Data Processing")
-            st.write("Big Data Technologies")
+            st.write("Big Data")
         st.markdown("-----")
 
 def main():
